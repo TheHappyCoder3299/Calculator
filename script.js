@@ -133,6 +133,8 @@ deleteButton.addEventListener('click',()=>{
     calculator.updateDisplay();
 });
 
+
+//Keyboard support 
 document.addEventListener('keydown',(event)=>{
     switch(event.key){
         case '=':
