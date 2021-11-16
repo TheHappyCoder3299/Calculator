@@ -132,3 +132,41 @@ deleteButton.addEventListener('click',()=>{
     calculator.delete();
     calculator.updateDisplay();
 });
+
+document.addEventListener('keydown',(event)=>{
+    switch(event.key){
+        case '=':
+        case 'Enter':
+            calculator.compute();
+            calculator.updateDisplay();
+            break;
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            calculator.chooseOperation(event.key);
+            calculator.updateDisplay();
+            break;
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '0':
+        case '.':
+            calculator.appendNumber(event.key);
+            calculator.updateDisplay();
+            break;
+        case 'Delete':
+        case 'Backspace':
+            calculator.delete();
+            calculator.updateDisplay();
+            break;
+        default:
+            return ;
+    }
+});
