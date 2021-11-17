@@ -164,6 +164,9 @@ document.addEventListener('keydown',(event)=>{
             calculator.updateDisplay();
             break;
         case 'Delete':
+            calculator.allClear();
+            calculator.updateDisplay();
+            break;
         case 'Backspace':
             calculator.delete();
             calculator.updateDisplay();
